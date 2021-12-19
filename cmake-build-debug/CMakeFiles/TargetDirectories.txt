@@ -1,0 +1,3 @@
+/home/javier/source/dwmchanges1/dwm-changes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/javier/source/dwmchanges1/dwm-changes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/javier/source/dwmchanges1/dwm-changes/cmake-build-debug/CMakeFiles/dwm_changes.dir
