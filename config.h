@@ -29,11 +29,13 @@ static const char dmenufont[] = "monospace:size=20";
 static const unsigned int transparency = 1;
 
 // theme
-// #include "themes/green.h"
-//#include "themes/orange.h"
+//#include "themes/gruvchad.h"
+// #include "themes/orange.h"
 //#include "themes/green.h"
+// #include "themes/bluegrey.h"
+//#include "themes/violet.h"
 
-#include "themes/bluegrey.h"
+#include "themes/dracula.h"
 
 static char *colors[][3] = {
 	// fg           bg           border
