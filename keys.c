@@ -240,10 +240,6 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } }, */
 	//
 
-	{MODKEY2 | ControlMask | ShiftMask, XK_h, togglehorizontalmax, NULL},
-	{MODKEY2 | ControlMask | ShiftMask, XK_l, togglehorizontalmax, NULL},
-	{MODKEY2 | ControlMask | ShiftMask, XK_j, toggleverticalmax, NULL},
-	{MODKEY2 | ControlMask | ShiftMask, XK_k, toggleverticalmax, NULL},
 	{MODKEY2 | ControlMask, XK_m, togglemaximize, {0}},
 
 	{MODKEY, XK_Down, moveresize, {.v = "0x 25y 0w 0h"}},
