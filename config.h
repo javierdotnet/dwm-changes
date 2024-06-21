@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 /* Constants */
-#define TERMINAL "kitty"
+#define TERMINAL "st"
 
 /* appearance */
 static const unsigned int borderpx = 3;		  /* border pixel of windows */
@@ -29,11 +29,11 @@ static const char dmenufont[] = "monospace:size=20";
 static const unsigned int transparency = 1;
 
 // theme
-//#include "themes/gruvchad.h"
+// #include "themes/gruvchad.h"
 // #include "themes/orange.h"
-//#include "themes/green.h"
+// #include "themes/green.h"
 // #include "themes/bluegrey.h"
-//#include "themes/violet.h"
+// #include "themes/violet.h"
 
 #include "themes/dracula.h"
 
