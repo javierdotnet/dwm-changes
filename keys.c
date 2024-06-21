@@ -138,18 +138,19 @@ static Key keys[] = {
 
 	{MODKEY, XK_Insert, spawn, SHCMD("notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\"")},
 
-	{MODKEY, XK_F1, spawn, SHCMD("setxkbmap es")},
-	{MODKEY | ShiftMask, XK_F1, spawn, SHCMD("setxkbmap us")},
+	{MODKEY, XK_F6, spawn, SHCMD("setxkbmap es")},
+	{MODKEY | ShiftMask, XK_F6, spawn, SHCMD("setxkbmap us")},
 
 	//{ MODKEY,			XK_F2,		spawn,		SHCMD("tutorialvids") },
-	{MODKEY, XK_F2, spawn, SHCMD("urxvt -e nmtui")},
-	{MODKEY, XK_F3, spawn, SHCMD("displayselect")},
-	{MODKEY, XK_F4, spawn, SHCMD("urxvt -e pulsemixer; kill -44 $(pidof dwmblocks)")},
+	{MODKEY | ShiftMask, XK_F2, spawn, SHCMD("urxvt -e nmtui")},
+	{MODKEY | ShiftMask, XK_F3, spawn, SHCMD("displayselect")},
+	{MODKEY | ShiftMask, XK_F4, spawn, SHCMD("urxvt -e pulsemixer; kill -44 $(pidof dwmblocks)")},
 	{MODKEY, XK_F5, xrdb, {.v = NULL}},
 
 	//{ MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") },
-	{MODKEY, XK_F6, spawn, SHCMD("$HOME/.screenlayout/1600x900.sh")},
-	{MODKEY | ShiftMask, XK_F6, spawn, SHCMD("$HOME/.screenlayout/1920x1080.sh")},
+	{MODKEY, XK_F1, spawn, SHCMD("$HOME/.screenlayout/1920x1080.sh")},
+	{MODKEY, XK_F2, spawn, SHCMD("$HOME/.screenlayout/1600x900.sh")},
+	{MODKEY, XK_F3, spawn, SHCMD("$HOME/.screenlayout/1368x768.sh")},
 
 	//{MODKEY, XK_F7, spawn, SHCMD("td-toggle")},
 	{MODKEY, XK_F7, spawn, SHCMD("akbl --on")},
