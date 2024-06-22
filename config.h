@@ -35,7 +35,7 @@ static const unsigned int transparency = 1;
 // #include "themes/bluegrey.h"
 // #include "themes/violet.h"
 
-#include "themes/green.h"
+#include "themes/gruvbox.h"
 
 static char *colors[][3] = {
 	// fg           bg           border
