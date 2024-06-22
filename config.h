@@ -18,7 +18,7 @@ static const int swallowfloating = 1;  /* 1 means swallow floating windows by de
 static const int smartgaps = 0;		   /* 1 means no outer gap when there is only one window */
 static const int showbar = 1;		   /* 0 means no bar */
 static const int topbar = 1;		   /* 0 means bottom bar */
-static const int user_bh = 30;		   /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh = 27;		   /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 // static const char *fonts[]          = { "Ubuntu:size=10", "ubuntu:pixelsize=10:antialias=true:autohint=true"  };
 static const char *fonts[] = {"SFProDisplay-Regular:size=11", "JoyPixels:pixelsize=9:antialias=true:autohint=true"};
 //
@@ -35,7 +35,7 @@ static const unsigned int transparency = 1;
 // #include "themes/bluegrey.h"
 // #include "themes/violet.h"
 
-#include "themes/dracula.h"
+#include "themes/green.h"
 
 static char *colors[][3] = {
 	// fg           bg           border
