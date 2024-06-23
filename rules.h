@@ -26,7 +26,6 @@ static const Rule rules[] = {
     {"microsoft-edge", NULL, NULL, 1 << 4, 1, 0, 0, 0, -1},
     {"Microsoft-edge", NULL, NULL, 1 << 4, 1, 0, 0, 0, -1},
 
-
     {"chromium", NULL, NULL, 1 << 3, 1, 0, 0, 0, -1},
     {"Chromium", NULL, NULL, 1 << 3, 1, 0, 0, 0, -1},
 
@@ -50,6 +49,7 @@ static const Rule rules[] = {
     {"VNC Viewer", NULL, NULL, 1 << 7, 1, 0, 0, 0, -1},
     {"realvnc-vncviewer", NULL, NULL, 1 << 8, 1, 0, 0, 0, -1},
     {"remmina", NULL, NULL, 1 << 8, 1, 0, 0, 0, -1},
+    {"spotify", NULL, NULL, 1 << 10, 1, 0, 0, 0, -1},
 
     {"Gimp", NULL, NULL, 1 << 8, 0, 1, 0, 0, -1},
     {"Glimpse", NULL, NULL, 1 << 8, 1, 0, 0, 0, -1},
