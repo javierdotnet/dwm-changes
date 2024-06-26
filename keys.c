@@ -68,7 +68,6 @@ static Key keys[] = {
 	{MODKEY | ShiftMask, XK_a, defaultgaps, {0}},
 	{MODKEY, XK_s, togglesticky, {0}},
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
-	{MODKEY, XK_d, spawn, {.v = dmenucmd}},
 
 	/* { MODKEY,			XK_d,		spawn,		SHCMD("") } }, */
 	{MODKEY, XK_f, togglefullscr, {0}},
@@ -126,10 +125,12 @@ static Key keys[] = {
 	{MODKEY | ShiftMask, XK_comma, spawn, SHCMD("transset --min 0.1 -p --dec 0.1")},
 	{MODKEY, XK_comma, spawn, SHCMD("transset -p --inc 0.1")},
 
+	/*
 	{MODKEY2, XK_Left, focusmon, {.i = -1}},
 	{MODKEY2 | ShiftMask, XK_Left, tagmon, {.i = -1}},
 	{MODKEY2, XK_Right, focusmon, {.i = +1}},
 	{MODKEY2 | ShiftMask, XK_Right, tagmon, {.i = +1}},
+	*/
 
 	{MODKEY, XK_Page_Up, shiftview, {.i = -1}},
 	{MODKEY, XK_Page_Down, shiftview, {.i = +1}},
@@ -151,7 +152,7 @@ static Key keys[] = {
 	{MODKEY, XK_F1, spawn, SHCMD("$HOME/.screenlayout/1920x1080.sh")},
 	{MODKEY, XK_F2, spawn, SHCMD("$HOME/.screenlayout/1600x900.sh")},
 	{MODKEY, XK_F3, spawn, SHCMD("$HOME/.screenlayout/1368x768.sh")},
-
+	{MODKEY, XK_F4, spawn, SHCMD("$HOME/.screenlayout/1920x1080_hdmi-1.sh")},
 	//{MODKEY, XK_F7, spawn, SHCMD("td-toggle")},
 	{MODKEY, XK_F7, spawn, SHCMD("akbl --on")},
 	{MODKEY | ShiftMask, XK_F7, spawn, SHCMD("akbl --off")},
@@ -164,8 +165,9 @@ static Key keys[] = {
 	//	{ MODKEY,			XK_F12,		xrdb,		{.v = NULL } },
 	{MODKEY, XK_r, zoom, {0}},
 	{MODKEY, XK_r, zoom, {0}},
-	{MODKEY, XK_space, spawn, SHCMD("rofi-launch.sh")},
-	{MODKEY | ShiftMask, XK_space, togglefloating, {0}},
+	{MODKEY, XK_d, spawn, SHCMD("rofi-launch.sh")},
+	{MODKEY | ShiftMask, XK_d, spawn, {.v = dmenucmd}},
+	{MODKEY, XK_space, togglefloating, {0}},
 
 	//{ 0,       			XK_Alt_L,   start_alt_tab,  {0} },
 

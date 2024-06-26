@@ -37,6 +37,23 @@ static const unsigned int transparency = 1;
 
 #include "themes/gruvbox.h"
 
+/* List of programs to start automatically during startup only. Note that these will not be
+ * executed again when doing a restart. */
+static const char *const autostart[] = {
+	//	"st", NULL,
+	"picom", "--experimental-backends", "--blur-method", "dual_kawase", "--blur-strength", "5", "-b", NULL,
+	"sh", "-c", "setbg", NULL,
+	"sh", "-c", "rofi-launch.sh", NULL,
+	"sh", "-c", "~/.screenlayout/1600x900.sh", NULL,
+	"dunst", NULL,
+	"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", NULL,
+	"sh", "-c", "nm-applet", NULL /* terminate */
+};
+
+/* List of programs to start automatically during a restart only. These should usually be short
+ * scripts that perform specific operations, e.g. changing a wallpaper. */
+static const char *const autorestart[] = {
+	"sh", "-c", "setbg", NULL};
 static char *colors[][3] = {
 	// fg           bg           border
 	[SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},

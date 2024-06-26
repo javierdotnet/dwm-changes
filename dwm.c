@@ -340,7 +340,6 @@ static void resizemouse(const Arg *arg);
 static void resizerequest(XEvent *e);
 static void restack(Monitor *m);
 static void run(void);
-static void runAutostart(void);
 static void scan(void);
 static int sendevent(Window w, Atom proto, int m, long d0, long d1, long d2, long d3, long d4);
 static void sendmon(Client *c, Monitor *m);
@@ -448,9 +447,10 @@ static Window root, wmcheckwin;
 
 static xcb_connection_t *xcon;
 
+#include "lib/autostart.h"
 /* configuration, allows nested code to access above variables */
 #include "config.h"
-
+#include "lib/autostart.c"
 /* compile-time check if all tags fit into an unsigned int bit array. */
 struct NumTags
 {
@@ -779,6 +779,7 @@ void cleanup(void)
 		while (m->stack)
 			unmanage(m->stack, 0);
 	XUngrabKey(dpy, AnyKey, AnyModifier, root);
+	autostart_killpids();
 	while (mons)
 		cleanupmon(mons);
 	if (showsystray)
@@ -1995,12 +1996,6 @@ void run(void)
 			handler[ev.type](&ev); /* call handler */
 }
 
-void runAutostart(void)
-{
-	system("~/.config/dwm/autostart.sh &");
-	togglegaps(0);
-}
-
 void scan(void)
 {
 	unsigned int i, num;
@@ -3199,13 +3194,14 @@ int main(int argc, char *argv[])
 	XrmInitialize();
 	loadxrdb();
 	setup();
+	autostart_exec();
 #ifdef __OpenBSD__
 	if (pledge("stdio rpath proc exec", NULL) == -1)
 		die("pledge");
 #endif /* __OpenBSD__ */
 	scan();
-	runAutostart();
 	run();
+
 	if (restart)
 		execvp(argv[0], argv);
 	cleanup();
