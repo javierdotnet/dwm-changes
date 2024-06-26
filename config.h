@@ -43,8 +43,6 @@ static const char *const autostart[] = {
 	//	"st", NULL,
 	"picom", "--experimental-backends", "--blur-method", "dual_kawase", "--blur-strength", "5", "-b", NULL,
 	"sh", "-c", "setbg", NULL,
-	"sh", "-c", "rofi-launch.sh", NULL,
-	"sh", "-c", "~/.screenlayout/1600x900.sh", NULL,
 	"dunst", NULL,
 	"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", NULL,
 	"sh", "-c", "nm-applet", NULL /* terminate */
@@ -125,11 +123,11 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
-// static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13" };
-// static const char *tags[] = { "1:web", "2:term", "3:dev", "4:misc" };
-// static const char *tags[] = { "main", "web", "mail", "docs", "media", "rss", "social", "code", "misc" };
-// static const char *tags[] = { "1:", "2:", "3:", "4:", "5:", "6:", "7:", "8:", "9:" };
+// static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+//  static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13" };
+//  static const char *tags[] = { "1:web", "2:term", "3:dev", "4:misc" };
+//  static const char *tags[] = { "main", "web", "mail", "docs", "media", "rss", "social", "code", "misc" };
+static const char *tags[] = {"1:", "2:", "3:", "4:", "5:", "6:", "7:", "8:", "9:"};
 
 /* layout(s) */
 static const float mfact = 0.50;  /* factor of master area size [0.05..0.95] */

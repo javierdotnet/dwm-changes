@@ -164,7 +164,6 @@ static Key keys[] = {
 	{MODKEY, XK_F11, spawn, SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)")},
 	//	{ MODKEY,			XK_F12,		xrdb,		{.v = NULL } },
 	{MODKEY, XK_r, zoom, {0}},
-	{MODKEY, XK_r, zoom, {0}},
 	{MODKEY, XK_d, spawn, SHCMD("rofi-launch.sh")},
 	{MODKEY | ShiftMask, XK_d, spawn, {.v = dmenucmd}},
 	{MODKEY, XK_space, togglefloating, {0}},
