@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 /* Constants */
-#define TERMINAL "st"
+#define TERMINAL "kitty"
 
 /* appearance */
 static const unsigned int borderpx = 3;		  /* border pixel of windows */
@@ -29,29 +29,45 @@ static const char dmenufont[] = "monospace:size=20";
 static const unsigned int transparency = 1;
 
 // theme
-// #include "themes/gruvchad.h"
-// #include "themes/orange.h"
+ //#include "themes/gruvchad.h"
+  #include "themes/gruvbox.h"
+ //#include "themes/orange.h"
 // #include "themes/green.h"
 // #include "themes/bluegrey.h"
 // #include "themes/violet.h"
 
-#include "themes/gruvbox.h"
+//#include "themes/dracula.h"
 
 /* List of programs to start automatically during startup only. Note that these will not be
  * executed again when doing a restart. */
 static const char *const autostart[] = {
-	//	"st", NULL,
-	"picom", "--experimental-backends", "--blur-method", "dual_kawase", "--blur-strength", "5", "-b", NULL,
-	"sh", "-c", "setbg", NULL,
+	// "st", NULL,
+	"xcompmgr",NULL,
 	"dunst", NULL,
+	"sh", "-c", "slstatus", NULL,
+	"setxkbmap"," es", NULL,
+	"/home/javier/.local/bin/setbg", NULL,
+	//"picom", "--experimental-backends", "--blur-method", "dual_kawase", "--blur-strength", "5", "-b", NULL,
+	//"sh", "-c", "xcompmgr", NULL,
+	//"sh", "-c", "$HOME/.local/bin/setbg", NULL,
+	//"dunst", NULL,
+    "sh", "-c", "greenclip daemon", NULL,
+
+//	"copyq", NULL,
 	"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", NULL,
-	"sh", "-c", "nm-applet", NULL /* terminate */
+	// s"sh", "-c", "nm-applet", NULL /* terminate */
+	  
+	NULL /* terminate */
 };
 
 /* List of programs to start automatically during a restart only. These should usually be short
  * scripts that perform specific operations, e.g. changing a wallpaper. */
 static const char *const autorestart[] = {
-	"sh", "-c", "setbg", NULL};
+	"sh", "-c", "setbg", NULL,
+	"setxkbmap"," es", NULL
+};
+
+
 static char *colors[][3] = {
 	// fg           bg           border
 	[SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},
