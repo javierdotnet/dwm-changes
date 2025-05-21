@@ -7,24 +7,26 @@ static Key keys[] = {
 	{MODKEY, XK_grave, spawn, SHCMD("dmenuunicode")},
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(XK_1, 0)
-		TAGKEYS(XK_2, 1)
-			TAGKEYS(XK_3, 2)
-				TAGKEYS(XK_4, 3)
-					TAGKEYS(XK_5, 4)
-						TAGKEYS(XK_6, 5)
-							TAGKEYS(XK_7, 6)
-								TAGKEYS(XK_8, 7)
-									TAGKEYS(XK_9, 8){MODKEY, XK_0, view, {.ui = ~0}},
+	TAGKEYS(XK_2, 1)
+	TAGKEYS(XK_3, 2)
+	TAGKEYS(XK_4, 3)
+	TAGKEYS(XK_5, 4)
+	TAGKEYS(XK_6, 5)
+	TAGKEYS(XK_7, 6)
+	TAGKEYS(XK_8, 7)
+	TAGKEYS(XK_9, 8)
+	{MODKEY, XK_0, view, {.ui = ~0}},
 	{MODKEY | ShiftMask, XK_0, tag, {.ui = ~0}},
 	{MODKEY, XK_minus, spawn, SHCMD("pamixer -d 5; kill -44 $(pidof dwmblocks)")},
 	{MODKEY | ShiftMask, XK_minus, spawn, SHCMD("pamixer -i 15; kill -44 $(pidof dwmblocks)")},
 	{MODKEY, XK_equal, spawn, SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)")},
 	{MODKEY | ShiftMask, XK_equal, spawn, SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)")},
-	{MODKEY, XK_BackSpace, spawn, SHCMD("sysact")},
-	{MODKEY | ShiftMask, XK_BackSpace, spawn, SHCMD("sysact")},
+
 
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */
 	{MODKEY, XK_q, killclient, {0}},
+	{ MODKEY|Mod1Mask,              XK_q,      quit,           {0} },
+    { MODKEY|Mod1Mask,              XK_r,      quit,           {1} },
 	{MODKEY | ShiftMask, XK_q, spawn, SHCMD("xkill")},
 	{Mod1Mask, XK_F4, killclient, {0}},
 
@@ -61,6 +63,10 @@ static Key keys[] = {
 	{ MODKEY,			XK_backslash,		view,		{0} },
 
 	*/
+
+	{MODKEY | ShiftMask, XK_F12, spawn, SHCMD("$HOME/local/bin/sysact")},
+	{MODKEY | ShiftMask, XK_BackSpace, spawn, SHCMD("$HOME/local/bin/sysact")},
+
 
 	/* { MODKEY|ShiftMask,		XK_backslash,		spawn,		SHCMD("") }, */
 
@@ -163,6 +169,8 @@ static Key keys[] = {
 
 	{MODKEY, XK_F11, spawn, SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)")},
 	//	{ MODKEY,			XK_F12,		xrdb,		{.v = NULL } },
+	{ MODKEY,			XK_F12,		xrdb,		{.v = NULL } },
+
 	{MODKEY, XK_r, zoom, {0}},
 	{MODKEY, XK_d, spawn, SHCMD("rofi-launch.sh")},
 	{MODKEY | ShiftMask, XK_d, spawn, {.v = dmenucmd}},

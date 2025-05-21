@@ -32,9 +32,9 @@ static const unsigned int transparency = 1;
  //#include "themes/gruvchad.h"
  // #include "themes/gruvbox.h"
  //#include "themes/orange.h"
-// #include "themes/green.h"
-// #include "themes/bluegrey.h"
- #include "themes/violet.h"
+ #include "themes/green.h"
+ // #include "themes/bluegrey.h"
+// #include "themes/violet.h"
  //#include "themes/dracula.h"
 
 //#include "themes/dracula.h"
@@ -92,7 +92,7 @@ static const char *screenshotcmd[] = {"flameshot", "gui", NULL};
 static const char *instantswitchcmd[] = {"rofi", "-show", "window", "-kb-row-down", "Alt+Tab,Down", "-kb-row-up", "Alt+Ctrl+Tab,Up", "-kb-accept-entry", "!Alt_L,!Alt+Tab,Return", "-me-select-entry", "", "-me-accept-entry", "MousePrimary", NULL};
 static const char *betterlockscreen[] = {"betterlockscreen.sh", NULL};
 
-static const char *rootmenu[] = {"xmenu.sh", NULL};
+static const char *rootmenu[] = {"$HOME/local/.bin/xmenu.sh", NULL};
 
 /* launcher commands (They must be NULL terminated) */
 static const char *surf[] = {"surf", "duckduckgo.com", NULL};
