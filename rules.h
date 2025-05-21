@@ -10,7 +10,7 @@ static const Rule rules[] = {
      *	WM_CLASS(STRING) = instance, class
      *	WM_NAME(STRING) = title
      */
-    /* class    instance      title       	 tags mask    iscentered  isfloating   isterminal  noswallow  monitor */
+    /* class    instance   title tags mask iscentered isfloating ñññisterminal  noswallow  monitor */
 
     {"pcmanfm", NULL, NULL, 1 << 2, 0, 1, 0, 0, -1},
 
@@ -56,6 +56,7 @@ static const Rule rules[] = {
 
     {"urxvt", NULL, NULL, 0, 1, 0, 0, 0, -1},
     {"st", NULL, NULL, 0, 1, 0, 0, 0, -1},
+    {"kitty", NULL, NULL, 0, 1, 0, 0, 0, -1},
 
     {NULL, NULL, "Event Tester", 0, 0, 0, 0, 1, -1},
     {NULL, "spterm", NULL, SPTAG(0), 1, 1, 0, -1},
@@ -86,8 +87,11 @@ static const Rule rules[] = {
     {NULL, "guake", NULL, SPTAG(0), 1, 1, 0, -1},
     {"Tilda", NULL, NULL, 0, True, -1},
 
-    {"discord", NULL, NULL, 0, True, -1},
-    {"Discord", NULL, NULL, 0, True, -1},
+   // {"discord", NULL, NULL, 0, True, -1},
+   // {"Discord", NULL, NULL, 0, True, -1},
+     
+    {"discord", NULL, NULL, 1 << 8, 0, 1, 0, 0, -1},
+    {"Discord", NULL, NULL, 1 << 8, 0, 1, 0, 0, -1},
 
 };
 

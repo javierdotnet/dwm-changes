@@ -180,7 +180,7 @@ static Key keys[] = {
 
 	//{ 0,				XK_Print,	spawn,		SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
 	//{ 0,				XK_Print,	spawn,		SHCMD("flameshot gui") },
-	{0, XK_Print, spawn, {.v = screenshotcmd}},
+	{MODKEY | ShiftMask, XK_s, spawn, {.v = screenshotcmd}},
 	{ShiftMask, XK_Print, spawn, SHCMD("maimpick")},
 	{MODKEY, XK_Print, spawn, SHCMD("dmenurecord")},
 	{MODKEY | ShiftMask, XK_Print, spawn, SHCMD("dmenurecord kill")},

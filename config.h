@@ -30,11 +30,12 @@ static const unsigned int transparency = 1;
 
 // theme
  //#include "themes/gruvchad.h"
-  #include "themes/gruvbox.h"
+ // #include "themes/gruvbox.h"
  //#include "themes/orange.h"
 // #include "themes/green.h"
 // #include "themes/bluegrey.h"
-// #include "themes/violet.h"
+ #include "themes/violet.h"
+ //#include "themes/dracula.h"
 
 //#include "themes/dracula.h"
 
@@ -42,18 +43,17 @@ static const unsigned int transparency = 1;
  * executed again when doing a restart. */
 static const char *const autostart[] = {
 	// "st", NULL,
+	"nitrogen", "--restore", NULL,
 	"xcompmgr",NULL,
-	"dunst", NULL,
+	// "dunst", NULL,
 	"sh", "-c", "slstatus", NULL,
 	"setxkbmap"," es", NULL,
-	"/home/javier/.local/bin/setbg", NULL,
+	// "/home/javier/.local/bin/setbg", NULL,
 	//"picom", "--experimental-backends", "--blur-method", "dual_kawase", "--blur-strength", "5", "-b", NULL,
 	//"sh", "-c", "xcompmgr", NULL,
 	//"sh", "-c", "$HOME/.local/bin/setbg", NULL,
-	//"dunst", NULL,
-    "sh", "-c", "greenclip daemon", NULL,
-
-//	"copyq", NULL,
+	// "sh", "-c", "greenclip daemon", NULL,
+	"copyq", NULL,
 	"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", NULL,
 	// s"sh", "-c", "nm-applet", NULL /* terminate */
 	  
@@ -63,7 +63,8 @@ static const char *const autostart[] = {
 /* List of programs to start automatically during a restart only. These should usually be short
  * scripts that perform specific operations, e.g. changing a wallpaper. */
 static const char *const autorestart[] = {
-	"sh", "-c", "setbg", NULL,
+	//"sh", "-c", "setbg", NULL,
+	"nitrogen", "--restore", NULL,
 	"setxkbmap"," es", NULL
 };
 
@@ -97,6 +98,8 @@ static const char *rootmenu[] = {"xmenu.sh", NULL};
 static const char *surf[] = {"surf", "duckduckgo.com", NULL};
 static const char *firefox[] = {"firefox-developer-edition", "duckduckgo.com", NULL};
 static const char *chromium[] = {"chromium", "duckduckgo.com", NULL};
+static const char *googlechrome[] = {"google-chrome-stable", "duckduckgo.com", NULL};
+
 static const char *kittyterm[] = {"kitty", NULL, NULL};
 static const char *xkill[] = {"/bin/sh -c", "xkill", NULL};
 // static const char *explorer[] = {"thunar", "/home/javier", NULL};
@@ -116,7 +119,7 @@ static const Launcher launchers[] = {
 	{ xkill ,   ""},
 		 { firefox,     "" },
 	*/
-
+	{ googlechrome,    "" },
 	{explorer, ""},
 	{xkill, ""},
 	{kittyterm, "﮸"}};
